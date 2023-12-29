@@ -1,1 +1,28 @@
 # c-language
+1 WAP THAT ACCEPT THE MARK OF SUBJECTS AND FIND THE SUM AND PERCENTAGE MARKS OBTAINED BY THE STUDENT
+#include<stdio.h>
+int main()
+{
+    int numofsub,i;
+    float sum=0,per,marks;
+    printf("enter no of subject:");
+    scanf("%d",&numofsub);
+    
+    for(i=1;i <= numofsub; i++){
+        printf("enter the marks of %d subject:",i);
+        scanf("%f",&marks);
+    
+    if( marks < 0 || marks > 100 ){
+        printf("please enter the marks between 0 and 100\n");
+        return 1;
+    }
+    sum += marks;
+    }
+    
+    per = (sum / (numofsub * 100 )) * 100;
+    
+    printf("Sum of marks: %.2f\n", sum);
+    printf("Percentage: %.2f%%\n", per);
+    
+    return 0;
+}	
