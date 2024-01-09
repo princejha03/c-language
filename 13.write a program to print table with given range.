@@ -1,0 +1,19 @@
+#include<stdio.h>
+int table(int num,int range){
+    int mul;
+    for(int i=1;i<=range;i++){
+        mul= num *i;
+        printf("%d * %d = %d",num,i,mul);
+        printf("\n");
+    }
+    
+}
+int main(){
+    int num,range;
+    printf("Enter the number: ");
+    scanf("%d",&num);
+    printf("Enter the range: ");
+    scanf("%d",&range);
+    printf("The table of %d till its %d multiple are\n",num,range,table(num,range));
+    return 0;
+}
