@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int fibo(int n) {
+    int t1 = 0, t2 = 1, t3, i;
+    printf("The Fibonacci series: ");
+    for (i = 0; i < n; i++) {
+        if (i <= 1) {
+            t3 = i;
+        } else {
+            t3 = t1 + t2;
+            t1 = t2;
+            t2 = t3;
+        }
+        printf("%d ", t3);
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    if (n < 0) {
+        printf("Enter a valid number of terms.\n");
+        return 1;
+    }
+
+    fibo(n);
+
+    return 0;
+}
