@@ -1,0 +1,23 @@
+#include<stdio.h>
+int isarmstrong(int n){
+    int temp = n;
+    int sum = 0;
+    while(n>0){
+        int rem = n%10;
+        sum= (sum) +(rem*rem*rem);
+        n = n/10;
+    }
+    return temp == sum;
+}
+int main(){
+    int start =1;
+    int end = 1000;
+    
+    printf("The armstrong numer between %d and %d are:\n",start,end);
+    for(int i= start; i<= end;i++){
+        if(isarmstrong(i)){
+            printf("%d ",i);
+        }
+    }
+    return 0;
+}
